@@ -12,7 +12,7 @@ const outputfile = fs.createWriteStream(path.join(outputFolder, '', 'bundle.css'
       if (path.extname(file.name) === '.css') {
         const readFile = fs.createReadStream(path.join(folderStyles, file.name));
         readFile.on('data', chunk => {
-          outputfile.write(chunk.toString());
+          outputfile.write(`${chunk.toString()}\n`);
         });
       }
     }
