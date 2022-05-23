@@ -1,6 +1,7 @@
 const fs = require('fs');
 const {stdout, stdin} = process;
-const file = fs.createWriteStream(`${__dirname}/text.txt`);
+const path  = require('path');
+const file = fs.createWriteStream(path.join(__dirname, 'text.txt'));
 stdout.write('Input text \n');
 
 stdin.on('data', data => {
