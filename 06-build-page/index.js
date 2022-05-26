@@ -5,7 +5,7 @@ const path = require('path');
 
 const componentsPath = path.join(__dirname, 'components');
 const outputPath = path.join(__dirname, 'project-dist');
-const outputAssets = path.join(__dirname, 'project-dist\\assets');
+const outputAssets = path.join(outputPath, 'assets');
 let templatePath = path.join(__dirname, 'template.html');
 const stylesPath = path.join(__dirname, '', 'styles');
 const assetsPath = path.join(__dirname, '', 'assets');
